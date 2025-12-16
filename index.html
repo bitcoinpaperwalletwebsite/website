@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bitcoinpaperwallet - Permanently Closed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #f7931a 0%, #f39c12 100%);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 40px rgba(247, 147, 26, 0.3);
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .shutdown-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            margin-bottom: 1rem;
+        }
+        .hero-text {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        section {
+            background: white;
+            margin-bottom: 3rem;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        h2 {
+            font-size: 2.2rem;
+            color: #f7931a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .steps {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #f7931a;
+        }
+        .step-number {
+            background: #f7931a;
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .alternatives, .hardware {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #f7931a;
+        }
+        .card i {
+            font-size: 3rem;
+            color: #f7931a;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #f7931a 0%, #f39c12 100%);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(247, 147, 26, 0.4);
+            color: white;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            section { padding: 2rem 1.5rem; }
+            .steps { grid-template-columns: 1fr; }
+            .alternatives, .hardware { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="shutdown-badge">
+                <i class="fas fa-exclamation-triangle"></i> Permanently Closed
+            </div>
+            <h1>bitcoinpaperwallet.com</h1>
+            <p class="hero-text">Thank you for using our service over the years. As of December 2025, BitcoinPaperWallet has been permanently discontinued. Today, more secure alternatives to paper wallets are available, including hardware wallets such as Ledger and Trezor. If you still prefer to use paper wallets, we recommend bitaddress.org, which is the original codebase on which BitcoinPaperWallet was built. HODL HODL!</p>
+        </header>
+
+        <section id="alternatives">
+            <h2><i class="fas fa-wallet"></i> Alternatives for Paper Wallets</h2>
+            <p>Generate new paper wallets offline using these trusted open-source tools:</p>
+            <div class="alternatives">
+                <div class="card">
+                    <i class="fas fa-globe"></i>
+                    <h3>bitaddress.org</h3>
+                    <p>Classic offline generator. Save page, disconnect internet, generate.</p>
+                    <a href="https://www.bitaddress.org" class="btn" target="_blank">Visit bitaddress.org</a>
+                </div>
+            </div>
+            <div class="warning" style="margin-top: 2rem;">
+                <strong>Security Tip:</strong> Always generate offline, print immediately, and destroy digital copies.
+            </div>
+        </section>
+
+        <section id="hardware">
+            <h2><i class="fas fa-shield-alt"></i> Recommended: Switch to Hardware Wallets</h2>
+            <p>Paper wallets are cold storage, but hardware wallets are easier, safer, and more user-friendly. They protect against physical loss and malware.</p>
+            <div class="hardware">
+                <div class="card">
+                    <i class="fab fa-usb"></i>
+                    <h3>Ledger</h3>
+                    <p>Secure chip, supports Bitcoin & more. Restore with seed.</p>
+                    <a href="https://shop.ledger.com/?r=376df84e1f42" class="btn" target="_blank">Get Ledger</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Trezor</h3>
+                    <p>Open-source, touchscreens, Air-gapped signing.</p>
+                    <a href="https://trezor.io/?transaction_id=102038a8f187e38b7636a8465f8d76&offer_id=133&affiliate_id=5429" class="btn" target="_blank">Get Trezor</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="existing-keys">
+            <h2><i class="fas fa-key"></i> What to Do with Your Existing Paper Wallets</h2>
+            <p>Your paper wallets are safe as long as you keep the private keys secret. Do not lose them! Here's how to access your funds:</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Download Electrum</strong> (free Bitcoin wallet): <a href="https://electrum.org/#download" class="btn" target="_blank">Download Electrum</a><br>
+                        Verify the download with GPG signatures.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Create a new wallet</strong> or use an existing one.<br>
+                        Go to Wallet &gt; Private Keys &gt; Sweep.
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Enter your private key</strong> (starts with 5, K, or L, or WIF format).<br>
+                        Click Sweep. Funds will move to your new wallet address.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>bitcoinpaperwallet &copy; 2014-2025. Stay safe with your Bitcoin.</p>
+            <p>Questions? Check <a href="https://bitcoin.org/en/secure-your-wallet">bitcoin.org</a> for best practices.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
